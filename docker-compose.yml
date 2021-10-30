@@ -13,6 +13,13 @@ services:
       - postgres_test_data:/var/lib/postgresql/data
     env_file:
       - ./.env.postgres
+#    networks:
+#      - common-network
 
 volumes:
   postgres_test_data:
+
+#networks:
+#  common-network:
+#    external:
+#      name: common-network  # must match the actual name of the network created in the external file
